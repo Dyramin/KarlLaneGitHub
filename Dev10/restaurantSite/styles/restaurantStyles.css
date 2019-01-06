@@ -1,0 +1,125 @@
+/*
+Creator: Karl Lane
+Date created: December 30, 2018
+Date last modified: January 01, 2019
+*/
+
+/*  Requirement #7 states that the home page's background color should 
+    be any color other than white  */
+body {
+	background-color: #E6F3FF;
+	border: collapse;
+	font-family: arial, helvetica, sans-serif;
+	color: #0D1F2D;
+	max-width: 900px;
+	margin: auto;
+	/* border: 0.5px solid #546A7B; */
+}
+
+/* Requirement #1 states that  header and footer 
+   must match across all pages */
+header, footer {
+	background-color: #5B7D87;
+	color: #FEF9FF;
+	height: 100px;
+	text-align: center;
+	padding: 10px 5px 30px 5px;
+	margin-bottom: 10px;
+}
+
+footer {
+	padding: 20px;
+}
+
+div.topRibbon {
+	border-bottom: 1px solid silver;
+	
+}
+
+div.bottomRibbon {
+	border-top: 1px solid silver;
+}
+
+/* Requirement #4 states restaurant name must be 
+   styled with hosted or embedded font */
+h1 {
+	font-size: 2.5em;
+	font-family: 'Iceland', cursive, arial, helvetica, sans-serif;
+}
+nav {
+	background-color: #E6F3FF;
+	border-top: 1px thin #546A7B;
+	border-bottom: 1px solid #546A7B;
+	margin-bottom: 25px;	
+}
+nav a {
+	background-color: #5B7D87;
+	color: #FEF9FF;
+	padding: 4px;
+	border: thin solid #000000;
+	border: collapse;
+	text-decoration: none;
+	text-align: center;
+	display: block; /* for the margin to work because 'a' is inline element */
+	width: 140px;
+	float: left;
+}
+
+/* Requirement #9 states to make visited links a different color than 
+   their default state */
+nav a:visited {
+	color: #CCCCCC;
+}
+
+/* Requirement #9 states to make links bold only when hovering over them */
+nav a:hover {
+	background-color: #FEF9FF;
+	color: #5B7D87;
+	font-weight: bold;
+}
+
+/* Requirement #9 states that active links should not be underlined */
+nav a:active {
+	background-color: #5B7D87;
+	text-decoration: none;
+}
+
+.clear-float {
+	clear:both;
+}
+
+.right-content {
+	float:left;
+	margin-bottom: 16px;
+}
+.left-content {
+	float:right;
+	margin-bottom: 16px;
+}
+article {
+	margin: 16px;
+}
+div.jumbotron {
+	background-color: #E6F3FF;
+	max-width: 900px;
+	max-height: 280px;
+	margin: 0 auto;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  border: thin solid #000000;
+  display: inline-block;
+}
+
+.activeDot {
+  height: 25px;
+  width: 25px;
+  background-color: #E6F3FF;
+  border-radius: 50%;
+  border: thin solid #000000;
+  display: inline-block;
+}

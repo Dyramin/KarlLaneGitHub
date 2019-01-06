@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+Creator: Karl Lane
+Date created: January 03, 2019
+Date last modified: January 04, 2019
+-->
+<html>
+<head>
+    <title>Lucky Sevens</title>
+	
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="styles/luckySevens.css">
+	
+	<script type="text/javascript" src="scripts/LuckySevens2.js"></script>
+	<noscript>Your browser does not support JavaScript!</noscript>
+	
+	<style>
+	fieldset {
+		height: 100px;
+		text-align: center;
+		padding: 20px;
+		width="50%";
+		margin: 0 auto;
+	}
+	
+	table.statDisplay {
+		border: thick black solid;
+		width: 50%;
+		height: 250px;
+		text-align: center;
+		padding: 10px;
+		margin: 0 auto;
+	}
+	thead tr {
+		background-color: #99ceff;
+	}
+	tbody tr:nth-child(odd) {
+		background-color: #CCE6FF;
+	}
+	
+	td, th {
+		border: thin black solid;
+		border-collapse;
+	}
+	
+	caption {
+		border-top: thin black solid;
+		height: 90px;
+	}
+	article {
+		padding: 20px;
+		height: 400px;
+	}
+				
+	</style>
+	
+</head>
+
+<!-- Initial Game Layout in Wireframe Shows No Output -->
+<body onload="hideResults()">
+
+<header>
+	<h1>Lucky Sevens</h1>
+</header>
+
+<div id="userInput">
+	<fieldset>
+		<span>Starting Bet:  <input type="number" name="StartingBet" id="betInput" placeholder="$0.00"></span>
+		<br /><br />
+        <button onclick="gameLoop()" id="playButton">Play</button>
+	</fieldset>
+</div>
+
+<section>
+<article>
+<!-- Display the Results Table -->
+    <div id="resultsTable">
+        <table class="statDisplay">
+		
+        <caption><h2>Results</h2></caption>
+			<thead>
+            <tr>
+                <th>Starting Bet</th>
+                <th id="resultsBet"></th>
+            </tr>
+			</thead>
+			<tbody>
+            <tr>
+                <td>Total Rolls Before Going Broke</td>
+                <td id="resultsRollCounter"></td>
+            </tr>
+            <tr>
+                <td>Highest Amount Won</td>
+                <td id="resultsHighestHeld"></td>
+            </tr>
+			
+			<!-- It is possible for the Roll Count at the highest amount
+			     to be a zero, if the highest amount was the original wager
+				 which would've occured before the first roll -->
+            <tr>
+                <td>Roll Count at Highest Amount Won</td>
+                <td id="resultsRollsFromHighest"></td>
+            </tr>
+			</tbody>
+        </table>
+	</div>
+</article>
+</section>
+
+<footer>
+	Copyright &copy; Karl Lane 2019. <br />
+	All Rights Reserved.
+</footer>
+</body>
+</html>
